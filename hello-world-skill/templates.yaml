@@ -1,0 +1,7 @@
+welcome_text: Welcome to the Hello World Alexa Skill. You can say your name, or, how are you
+
+hello: Hello {{ firstname }}. Great job on running your first Alexa skill.
+
+ask_name : What is your name
+
+ask_name_reprompt : Can you tell me your name

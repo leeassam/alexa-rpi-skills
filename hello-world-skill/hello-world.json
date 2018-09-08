@@ -1,0 +1,88 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "helloworld",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [
+                        {
+                            "name": "firstname",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "samples": [
+                                "{firstname}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "how are you",
+                        "say hi",
+                        "say hi to {firstname}",
+                        "say hello",
+                        "say hello to {firstname}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "HelloWorldIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "firstname",
+                            "type": "AMAZON.US_FIRST_NAME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.224323875399.1087909934087"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.224323875399.1087909934087",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What is your name?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Tell me who to say hello to"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Who should I say hello to?"
+                    }
+                ]
+            }
+        ]
+    }
+}
