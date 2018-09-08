@@ -19,10 +19,8 @@ GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
 GPIO.setup(outputPin, GPIO.OUT)   # Set pin's mode as output
 GPIO.output(outputPin, GPIO.HIGH) # Set outputPin  low to turn off the device
 
-
-
 while True: # Continue looping indefinitely
   GPIO.output(outputPin, GPIO.LOW)  # Turn device on
-  time.sleep(2) # Pause for 1 second
+  time.sleep(2) # Pause for 2 seconds
   GPIO.output(outputPin, GPIO.HIGH) # Turn device off
-  time.sleep(2) # Pause for 1 second
+  time.sleep(2) # Pause for 2 seconds
