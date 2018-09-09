@@ -17,7 +17,7 @@ GPIO.setwarnings(False)
 outputPin = 11 #pin 11 is connected to the relay board
 GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
 GPIO.setup(outputPin, GPIO.OUT)   # Set pin's mode as output
-GPIO.output(outputPin, GPIO.HIGH) # Set outputPin  low to turn off the device
+GPIO.output(outputPin, GPIO.HIGH) # Set outputPin high to turn off the device
 
 while True: # Continue looping indefinitely
   GPIO.output(outputPin, GPIO.LOW)  # Turn device on
