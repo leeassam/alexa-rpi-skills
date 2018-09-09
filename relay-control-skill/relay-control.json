@@ -1,0 +1,94 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "my device",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "OnOffIntent",
+                    "slots": [
+                        {
+                            "name": "OnOff",
+                            "type": "OnOffValue",
+                            "samples": [
+                                "{OnOff}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "switch {OnOff}",
+                        "{OnOff}",
+                        "turn {OnOff}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "OnOffValue",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "off"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "on"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "OnOffIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "OnOff",
+                            "type": "OnOffValue",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.44886977106.1123439538026"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.44886977106.1123439538026",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Do you want to turn your led on or off"
+                    }
+                ]
+            }
+        ]
+    }
+}
