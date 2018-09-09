@@ -21,7 +21,7 @@ GPIO.setwarnings(False)
 outputPin = 11 #pin 11 is connected to the relay board
 GPIO.setmode(GPIO.BOARD)       # Numbers GPIOs by physical location
 GPIO.setup(outputPin, GPIO.OUT)   # Set pin's mode as output
-GPIO.output(outputPin, GPIO.LOW) # Set outputPin  low to turn off the device
+GPIO.output(outputPin, GPIO.HIGH) # Set outputPin  high to turn off the device
 
 #initializing flask ask
 app = Flask(__name__)
@@ -47,10 +47,10 @@ def control(OnOff):
     elif command == "on" or command == "off":
         if command == "off":
             #turn OFF
-            GPIO.output(outputPin, GPIO.LOW)
+            GPIO.output(outputPin, GPIO.HIGH)
         else:
             #turn ON
-            GPIO.output(outputPin, GPIO.HIGH)
+            GPIO.output(outputPin, GPIO.LOW)
         response_text = render_template('command', onOffCommand=command)
         return statement(response_text).simple_card('Command', response_text)
     else:
