@@ -1,7 +1,7 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "my led",
+            "invocationName": "my project",
             "intents": [
                 {
                     "name": "AMAZON.FallbackIntent",

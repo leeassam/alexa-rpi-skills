@@ -3,8 +3,8 @@ Alexa Custom Skill to control an LED
     - Uses the flask-ask library
 
 Usage:
-Alexa, tell my led to turn on
-Alexa, ask my led to turn off
+Alexa, tell my project to turn on
+Alexa, ask my project to turn off
 
 Created by: Lee Assam
 www.powerlearningacademy.com
