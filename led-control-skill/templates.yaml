@@ -1,4 +1,4 @@
-welcome_text: Welcome to the LED control skill. You can say, tell my LED to turn on, or, tell my LED to turn off
+welcome_text: Welcome to the LED control skill. You can say, tell my project to turn on, or, tell my project to turn off
 
 command: Turning your LED {{ onOffCommand }}
 
